@@ -16,5 +16,7 @@ if __name__ == '__main__':
     print(brenda.idade)
     for filho in brenda.filhos:
         print(filho.nome)
-
-
+    brenda.sobrenome = 'Layse'
+    del brenda.filhos
+    print (brenda.__dict__)
+    print(lins.__dict__)
