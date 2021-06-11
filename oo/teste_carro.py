@@ -10,7 +10,7 @@ class CarroTestCase (TestCase):
     def teste_acelerar(self):
         motor=Motor()
         motor.acelerar()
-        self.assertEqual(1,motor.velocidade)
+        self.assertEqual(1, motor.velocidade)
 
 
 
