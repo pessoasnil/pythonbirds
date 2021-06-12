@@ -166,6 +166,7 @@ class PorcoTestes(TestCase):
         self.assertEqual('+', porco.caracter())
 
 
+
 class PassaroBaseTests(TestCase):
     """
     Classe base para teste de passaros.
