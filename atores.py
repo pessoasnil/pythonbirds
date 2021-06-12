@@ -9,7 +9,7 @@ ATIVO = 'Ativo'
 GRAVIDADE = 10  # m/s^2
 
 
-class Ator():
+class Ator:
     """
     Classe que representa um ator. Ele representa um ponto cartesiano na tela.
     """
@@ -38,7 +38,7 @@ class Ator():
         :param tempo: o tempo do jogo
         :return: posição x, y do ator
         """
-        return 1, 1
+        return self.x,self.y
 
     def colidir(self, outro_ator, intervalo=1):
         """
@@ -53,7 +53,6 @@ class Ator():
         :return:
         """
         pass
-
 
 
 class Obstaculo(Ator):
@@ -119,7 +118,6 @@ class Passaro(Ator):
         """
         return 1, 1
 
-
     def lancar(self, angulo, tempo_de_lancamento):
         """
         Lógica que lança o pássaro. Deve armazenar o ângulo e o tempo de lançamento para posteriores cálculo.
@@ -129,7 +127,6 @@ class Passaro(Ator):
         :param tempo_de_lancamento:
         :return:
         """
-        pass
 
 
 class PassaroAmarelo(Passaro):
