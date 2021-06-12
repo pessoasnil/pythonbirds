@@ -174,7 +174,7 @@ class FaseTestes(TestCase):
         fase.lancar(45, 3)
         fase.lancar(31,
                     5)  # testando que lançar passaros depios de todos
-        # lançados não causa erro
+        # lançados não causa eroo
 
         self.assertTrue(passaros[0].foi_lancado())
         self.assertTrue(passaros[1].foi_lancado())
