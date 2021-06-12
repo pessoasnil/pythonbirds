@@ -7,7 +7,7 @@ class Pessoa:
         self.filhos = list(filhos)
 
     def cumprimentar(self):
-        return f'olá {id(self)}'
+        return f'olá, meu nome é {(self.nome)}'
 
     @staticmethod
     def metodo_static ():
@@ -16,12 +16,18 @@ class Pessoa:
     @classmethod
     def nome_e_atributos_de_classe(cls):
             return f'{cls} - olhos {cls.olhos}'
-class Homem(Pessoa):
-    pass
 
+
+class Homem(Pessoa):
+    def cumprimentar(self):
+        cumprimentar_da_classe=super().cumprimentar()
+        return  f'{cumprimentar_da_classe}.aperto de mão'
+
+class Mutante (Pessoa):
+    olhos = 5
 
 if __name__ == '__main__':
-    lins = Homem(nome='Lins')
+    lins = Mutante(nome='Lins')
     brenda = Homem(lins, nome='brenda')
     print(Pessoa.cumprimentar(brenda))
     print(id(brenda))
@@ -36,7 +42,6 @@ if __name__ == '__main__':
     del brenda.olhos
     print (brenda.__dict__)
     print(lins.__dict__)
-    Pessoa.olhos = 3
     print(brenda.olhos)
     print(lins.olhos)
     print(Pessoa.olhos)
@@ -48,3 +53,6 @@ if __name__ == '__main__':
     print(isinstance(pessoa,Homem))
     print(isinstance(lins, Pessoa))
     print(isinstance(lins, Homem))
+    print(lins.olhos)
+    print(lins.cumprimentar())
+    print(brenda.cumprimentar())
